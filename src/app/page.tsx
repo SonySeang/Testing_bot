@@ -8,13 +8,14 @@ import { LocaleSwitcher } from '@/components/LocaleSwitcher/LocaleSwitcher';
 import { Page } from '@/components/Page';
 
 import tonSvg from './_assets/ton.svg';
+import Main from './shop/page';
 
 export default function Home() {
   const t = useTranslations('i18n');
 
   return (
     <Page back={false}>
-      <List>
+      {/* <List>
         <Section
           header="Features"
           footer="You can use these pages to learn more about features, provided by Telegram Mini Apps and other useful projects"
@@ -56,7 +57,11 @@ export default function Home() {
         <Section header={t('header')} footer={t('footer')}>
           <LocaleSwitcher/>
         </Section>
-      </List>
+      </List> */}
+      <Link href="/shop">
+      Go to Shop
+      </Link>
+
     </Page>
   );
 }
